@@ -1,0 +1,21 @@
+<h1> Media</h1>
+
+
+<% if @media.errors.any? %>
+<ul>
+<% @media.errors.full_messages.each do |msg| %>
+<li><%= msg %> </li>
+<% end %>
+</ul>
+<% end %>
+
+<%= form_for @media do |f| %>
+<p>
+  <%= f.label :description %><br/>
+  <%= f.text_field :description %>
+  </p>
+
+<p>
+<%= f.submit "submit" %>
+</p>
+<%end %>

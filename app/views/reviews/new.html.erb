@@ -1,0 +1,36 @@
+<h1>  Reviews</h1>
+
+<% if @review.errors.any? %>
+<ul>
+<% @review.errors.full_messages.each do |msg| %>
+<li><%= msg %> </li>
+<% end %>
+</ul>
+<% end %>
+
+<%= form_for @review do |f| %>
+<p>
+  <%= f.label :username %><br/>
+  <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :email %><br/>
+    <%= f.text_field :email %>
+    </p>
+    <p>
+      <%= f.label :ratinng %><br/>
+      <%= f.text_field :ratinng %>
+      </p>
+      <p>
+        <%= f.label :description %><br/>
+        <%= f.text_field :description %>
+        </p>
+
+        <p>
+          <%= f.label :user_id %><br/>
+          <%= f.text_field :user_id %>
+          </p>
+<p>
+<%= f.submit "submit" %>
+</p>
+<%end %>

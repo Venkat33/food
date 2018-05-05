@@ -1,4 +1,0 @@
-class Fooditems < ApplicationRecord
-
-
-end 
