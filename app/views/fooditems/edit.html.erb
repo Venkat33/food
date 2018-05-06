@@ -1,0 +1,32 @@
+<h1>Fooditems</h1>
+<% if @fooditem.errors.any? %>
+<ul>
+<% @fooditem.errors.full_messages.each do |msg| %>
+<li><%= msg %> </li>
+<% end %>
+</ul>
+<% end %>
+
+<%= form_for @fooditem do |f| %>
+<p>
+  <%= f.label :itemname %><br/>
+  <%= f.text_field :itemname %>
+  </p>
+  <p>
+    <%= f.label :description %><br/>
+    <%= f.text_field :description %>
+    </p>
+    <p>
+      <%= f.label :user_id %><br/>
+      <%= f.text_field :user_id %>
+      </p>
+      <p>
+        <%= f.label :image_file_name %><br/>
+        <%= f.text_field :image_file_name %>
+        </p>
+
+
+<p>
+<%= f.submit "updated was successfullly" %>
+</p>
+<%end %>

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
     resources :users
-    resources  :restuarant
+    resources :restuarants
     resources :fooditems
     resources :reviews
     resources :medias

@@ -1,0 +1,28 @@
+<h1> edit your account</h1>
+
+<h1>restuarants</h1>
+<% if @restuarant.errors.any? %>
+<ul>
+<% @restuarant.errors.full_messages.each do |msg| %>
+<li><%= msg %> </li>
+<% end %>
+</ul>
+<% end %>
+
+<%= form_for @restuarant do |f| %>
+<p>
+  <%= f.label :tittle%><br/>
+  <%= f.text_field :tittle %>
+</p>
+<p>
+<%= f.label :address %><br/>
+<%= f.text_field :address %>
+</p>
+<p>
+  <%= f.label :contact %><br/>
+  <%= f.text_field :contact %>
+</p>
+<p>
+<%= f.submit "update your account" %>
+</p>
+<%end %>

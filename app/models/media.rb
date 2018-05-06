@@ -1,3 +1,4 @@
 class Media < ApplicationRecord
 
+
 end

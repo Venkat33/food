@@ -1,0 +1,22 @@
+<h1> edit your account</h1>
+
+<h1>users</h1>
+<% if @user.errors.any? %>
+<ul>
+<% @user.errors.full_messages.each do |msg| %>
+<li><%= msg %> </li>
+<% end %>
+</ul>
+<% end %>
+
+<%= form_for @user do |f| %>
+<p>
+  <%= f.label :username%><br/>
+  <%= f.text_field :username %>
+</p>
+<%= f.label :email %><br/>
+<%= f.text_field :email %>
+<p>
+<%= f.submit "update your account" %>
+</p>
+<%end %>
