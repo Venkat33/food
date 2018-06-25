@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180506154903) do
+ActiveRecord::Schema.define(version: 20180625164955) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "intarray"
 
   create_table "fooditems", force: :cascade do |t|
     t.string "itemname"
@@ -55,6 +56,7 @@ ActiveRecord::Schema.define(version: 20180506154903) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
 end
