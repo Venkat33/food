@@ -16,7 +16,13 @@
 </p>
 <%= f.label :email %><br/>
 <%= f.text_field :email %>
+</p>
 <p>
+
+      <%= f.label :password_digest %>
+      <%= f.password_field :password_digest %></br>
+  </p>
+
 <%= f.submit "update your account" %>
 </p>
 <%end %>
